@@ -13,8 +13,17 @@ let randomItemFromRestaurant = findRandomFromCollection(restaurant);
 let randomItemFromTransportation = findRandomFromCollection(transportation);
 let randomItemFromEntertainment= findRandomFromCollection(entertainment);
 
+
+
 console.log(randomItemFromDestination);
 console.log(randomItemFromRestaurant);
 console.log(randomItemFromTransportation);
 console.log(randomItemFromEntertainment);
 
+
+let alertUserInternery= alert(randomItemFromDestination + ", " + randomItemFromRestaurant + ", " + randomItemFromEntertainment + ", " + randomItemFromTransportation + " is your itinerary.")
+let questionToUser= prompt("Do you like this itinerary? Yes or no?")
+while(questionToUser === "Yes"){
+    alert("Okay great! Thanks for choosing us for all of your travel needs!");
+    break;
+}
