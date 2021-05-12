@@ -7,23 +7,21 @@ function findRandomFromCollection(array){
       let randomItem = array[Math.floor(Math.random() * array.length)];
     return randomItem;
 }
+function reRandomizing(destArray, restArray,transArray, entArray){
 
-let randomItemFromDestination = findRandomFromCollection(destination);
-let randomItemFromRestaurant = findRandomFromCollection(restaurant);
-let randomItemFromTransportation = findRandomFromCollection(transportation);
-let randomItemFromEntertainment= findRandomFromCollection(entertainment);
+    let randomItemFromDestination = findRandomFromCollection(destArray);
+    let randomItemFromRestaurant = findRandomFromCollection(restArray);
+    let randomItemFromTransportation = findRandomFromCollection(transArray);
+    let randomItemFromEntertainment= findRandomFromCollection(entArray);
 
-
-
-console.log(randomItemFromDestination);
-console.log(randomItemFromRestaurant);
-console.log(randomItemFromTransportation);
-console.log(randomItemFromEntertainment);
-
-
-let alertUserInternery= alert(randomItemFromDestination + ", " + randomItemFromRestaurant + ", " + randomItemFromEntertainment + ", " + randomItemFromTransportation + " is your itinerary.")
-let questionToUser= prompt("Do you like this itinerary? Yes or no?")
-while(questionToUser === "Yes"){
-    alert("Okay great! Thanks for choosing us for all of your travel needs!");
-    break;
+    let randomResultTripDetailsArray=[randomItemFromDestination, randomItemFromRestaurant,randomItemFromTransportation,randomItemFromEntertainment];
+    return randomResultTripDetailsArray;
 }
+
+let randomizingIntinerary = reRandomizing(destination, restaurant,transportation,entertainment);
+
+console.log(randomizingIntinerary);
+
+let alertUserInternery= alert(randomizingIntinerary + " is your itinerary.");
+
+
