@@ -20,8 +20,28 @@ function reRandomizing(destArray, restArray,transArray, entArray){
 
 let randomizingIntinerary = reRandomizing(destination, restaurant,transportation,entertainment);
 
-console.log(randomizingIntinerary);
 
-let alertUserInternery= alert(randomizingIntinerary + " is your itinerary.");
+let consoleLogRandomIzingItinerary = console.log(randomizingIntinerary);
 
 
+
+function askingUserIfItineraryIsOkay(yesOrNo){
+    while(yesOrNo!= "Yes" || yesOrNo!="No"){
+        if(yesOrNo === "Yes"){
+            alert("Okay great! Thank you for choosing us for all of your travels needs!");
+            consoleLogRandomIzingItinerary;
+            break;
+        }
+        else if(yesOrNo === "No"){
+
+            prompt("How about this? " + reRandomizing(destination, restaurant, transportation, entertainment));
+            break;
+        }
+    }
+   
+}
+
+
+
+let yesOrNoQuestion= prompt("Is this a good itnerary" + " " + randomizingIntinerary + " Yes or No?")
+let intitialQuestion = askingUserIfItineraryIsOkay(yesOrNoQuestion);
